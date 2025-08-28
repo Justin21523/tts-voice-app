@@ -1,0 +1,30 @@
+# FastAPI 核心
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# 設定管理
+pydantic[email]==2.5.0
+python-dotenv==1.0.0
+
+# AI/ML 核心
+torch==2.1.0
+torchaudio==2.1.0
+transformers==4.36.0
+accelerate==0.25.0
+
+# 音訊處理
+librosa==0.10.1
+soundfile==0.12.1
+scipy==1.11.4
+
+# HTTP 請求
+httpx==0.25.2
+requests==2.31.0
+
+# 系統監控
+psutil==5.9.6
+
+# 測試 (可選)
+pytest==7.4.3
+pytest-asyncio==0.21.1
