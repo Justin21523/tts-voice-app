@@ -1,35 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// ============ src/App.jsx ============
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import TTSPage from './pages/TTSPage';
+import VCPage from './pages/VCPage';
 
-function App() {
-  const [count, setCount] = useState(0)
+// Import styles
+import './styles/variables.css';
+import './styles/global.css';
+import './styles/components.css';
+import './styles/pages.css';
 
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <div className="app">
+        <nav className="nav">
+          <div className="nav-container">
+            <NavLink to="/" className="nav-brand">
+              🎙️ Voice App
+            </NavLink>
+            <ul className="nav-links">
+              <li>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                  end
+                >
+                  Text-to-Speech
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/vc"
+                  className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                >
+                  Voice Conversion
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-export default App
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<TTSPage />} />
+            <Route path="/vc" element={<VCPage />} />
+          </Routes>
+        </main>
+
+        <footer className="footer" style={{
+          marginTop: 'var(--spacing-xl)',
+          padding: 'var(--spacing-lg) 0',
+          borderTop: '1px solid var(--border-color)',
+          textAlign: 'center',
+          color: 'var(--text-muted)'
+        }}>
+          <div className="container">
+            <p>Voice App MVP - Personal Voice Synthesis & Conversion Tool</p>
+          </div>
+        </footer>
+      </div>
+    </Router>
+  );
+};
+
+export default App;
