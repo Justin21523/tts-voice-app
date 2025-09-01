@@ -1,0 +1,110 @@
+/* ============ frontend/gradio_app/styles/custom.css ============ */
+/* Custom Gradio CSS Styling */
+
+/* Root variables */
+:root {
+  --voice-primary: #2563eb;
+  --voice-primary-hover: #1d4ed8;
+  --voice-success: #10b981;
+  --voice-warning: #f59e0b;
+  --voice-error: #ef4444;
+  --voice-border-radius: 8px;
+  --voice-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Main container styling */
+.gradio-container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+/* Tab styling */
+.tab-nav {
+  border-bottom: 2px solid #e5e7eb !important;
+  margin-bottom: 2rem !important;
+}
+
+.tab-nav button {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  padding: 1rem 1.5rem !important;
+  border-radius: var(--voice-border-radius) var(--voice-border-radius) 0 0 !important;
+  transition: all 0.2s ease !important;
+}
+
+.tab-nav button.selected {
+  background-color: var(--voice-primary) !important;
+  color: white !important;
+  border-color: var(--voice-primary) !important;
+}
+
+/* Button styling */
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--voice-primary),
+    var(--voice-primary-hover)
+  ) !important;
+  border: none !important;
+  box-shadow: var(--voice-shadow) !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 15px -3px rgb(0 0 0 / 0.2) !important;
+}
+
+/* Audio player styling */
+audio {
+  width: 100% !important;
+  border-radius: var(--voice-border-radius) !important;
+  box-shadow: var(--voice-shadow) !important;
+}
+
+/* File upload area */
+.file-upload-area {
+  border: 2px dashed #d1d5db !important;
+  border-radius: var(--voice-border-radius) !important;
+  padding: 2rem !important;
+  text-align: center !important;
+  transition: border-color 0.2s ease !important;
+}
+
+.file-upload-area:hover {
+  border-color: var(--voice-primary) !important;
+  background-color: rgba(37, 99, 235, 0.05) !important;
+}
+
+/* Result cards */
+.result-card {
+  background: white !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: var(--voice-border-radius) !important;
+  box-shadow: var(--voice-shadow) !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Status indicators */
+.status-success {
+  color: var(--voice-success) !important;
+  font-weight: 600 !important;
+}
+
+.status-error {
+  color: var(--voice-error) !important;
+  font-weight: 600 !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .gradio-container {
+    padding: 1rem !important;
+  }
+
+  .tab-nav button {
+    font-size: 1rem !important;
+    padding: 0.75rem 1rem !important;
+  }
+}
