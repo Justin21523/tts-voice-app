@@ -1,0 +1,229 @@
+/*=========== frontend/pyqt_app/styles/dark_theme.qss ============*/
+/* Dark theme stylesheet for PyQt application */
+
+QMainWindow {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+QWidget {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+/* Group Box Styling */
+QGroupBox {
+  font-weight: bold;
+  border: 2px solid #475569;
+  border-radius: 8px;
+  margin-top: 1ex;
+  padding-top: 10px;
+  background-color: #334155;
+}
+
+QGroupBox::title {
+  subcontrol-origin: margin;
+  left: 10px;
+  padding: 0 10px 0 10px;
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Button Styling */
+QPushButton {
+  background-color: #475569;
+  color: #f1f5f9;
+  border: 1px solid #64748b;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+QPushButton:hover {
+  background-color: #64748b;
+  border-color: #94a3b8;
+}
+
+QPushButton:pressed {
+  background-color: #334155;
+}
+
+QPushButton:disabled {
+  background-color: #374151;
+  color: #9ca3af;
+  border-color: #4b5563;
+}
+
+/* ComboBox Styling */
+QComboBox {
+  background-color: #374151;
+  border: 1px solid #6b7280;
+  border-radius: 6px;
+  padding: 6px 12px;
+  min-width: 80px;
+}
+
+QComboBox:hover {
+  border-color: #9ca3af;
+}
+
+QComboBox::drop-down {
+  subcontrol-origin: padding;
+  subcontrol-position: top right;
+  width: 20px;
+  border-left-width: 1px;
+  border-left-color: #6b7280;
+  border-left-style: solid;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+QComboBox::down-arrow {
+  image: none;
+  width: 0px;
+  height: 0px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #f1f5f9;
+}
+
+QComboBox QAbstractItemView {
+  background-color: #374151;
+  border: 1px solid #6b7280;
+  selection-background-color: #4f46e5;
+  color: #f1f5f9;
+}
+
+/* Text Edit Styling */
+QTextEdit {
+  background-color: #374151;
+  border: 1px solid #6b7280;
+  border-radius: 6px;
+  padding: 8px;
+  color: #f1f5f9;
+}
+
+QTextEdit:focus {
+  border-color: #4f46e5;
+}
+
+/* Label Styling */
+QLabel {
+  color: #e2e8f0;
+}
+
+/* Slider Styling */
+QSlider::groove:horizontal {
+  border: 1px solid #6b7280;
+  height: 6px;
+  background-color: #4b5563;
+  border-radius: 3px;
+}
+
+QSlider::handle:horizontal {
+  background-color: #4f46e5;
+  border: 1px solid #6366f1;
+  width: 18px;
+  margin: -6px 0;
+  border-radius: 9px;
+}
+
+QSlider::handle:horizontal:hover {
+  background-color: #6366f1;
+}
+
+/* Progress Bar Styling */
+QProgressBar {
+  border: 1px solid #6b7280;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #374151;
+}
+
+QProgressBar::chunk {
+  background-color: #4f46e5;
+  border-radius: 5px;
+}
+
+/* Tab Widget Styling */
+QTabWidget::pane {
+  border: 1px solid #475569;
+  background-color: #334155;
+}
+
+QTabBar::tab {
+  background-color: #475569;
+  color: #f1f5f9;
+  border: 1px solid #64748b;
+  padding: 8px 16px;
+  margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+  background-color: #4f46e5;
+  border-color: #6366f1;
+}
+
+QTabBar::tab:hover {
+  background-color: #64748b;
+}
+
+/* Status Bar Styling */
+QStatusBar {
+  background-color: #334155;
+  border-top: 1px solid #475569;
+  color: #e2e8f0;
+}
+
+/* Menu Bar Styling */
+QMenuBar {
+  background-color: #334155;
+  color: #f1f5f9;
+  border-bottom: 1px solid #475569;
+}
+
+QMenuBar::item {
+  background-color: transparent;
+  padding: 4px 8px;
+}
+
+QMenuBar::item:selected {
+  background-color: #4f46e5;
+}
+
+QMenu {
+  background-color: #374151;
+  border: 1px solid #6b7280;
+  color: #f1f5f9;
+}
+
+QMenu::item {
+  padding: 6px 12px;
+}
+
+QMenu::item:selected {
+  background-color: #4f46e5;
+}
+
+/* CheckBox Styling */
+QCheckBox {
+  color: #e2e8f0;
+}
+
+QCheckBox::indicator {
+  width: 16px;
+  height: 16px;
+}
+
+QCheckBox::indicator:unchecked {
+  background-color: #374151;
+  border: 1px solid #6b7280;
+  border-radius: 3px;
+}
+
+QCheckBox::indicator:checked {
+  background-color: #4f46e5;
+  border: 1px solid #6366f1;
+  border-radius: 3px;
+}
